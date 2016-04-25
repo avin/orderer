@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { browserHistory } from 'react-router'
+import Explore from '../components/Explore';
 
-export class App extends React.Component {
+export default class App extends React.Component {
 
     render() {
-        const { children, inputValue } = this.props
+        const {children} = this.props;
         return (
             <div>
-                <Explore value={inputValue}
-                         onChange={this.handleChange} />
+                <Explore />
                 <hr />
                 {children}
             </div>
